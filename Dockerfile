@@ -24,6 +24,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Aktifkan mod_rewrite Apache
 RUN a2enmod rewrite
+RUN a2enmod rewrite
+
+RUN a2dismod mpm_event || true
+RUN a2dismod mpm_worker || true
+RUN a2enmod mpm_prefork
 
 # Copy source code ke folder kerja container
 COPY . /var/www/html/
