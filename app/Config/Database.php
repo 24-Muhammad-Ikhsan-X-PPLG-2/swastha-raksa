@@ -198,13 +198,14 @@ class Database extends Config
                 'DSN'      => '',
                 'hostname' => 'tramway.proxy.rlwy.net',
                 'username' => 'root',
-                'password' => 'EsnWjjrZzxKUscikGWkPEmtctZKwttve',
+                'password' => '',
                 'database' => 'railway',
                 'DBDriver' => 'MySQLi',
                 'DBPrefix' => 'swastha_raksa_',
                 'port'     => 14160,
                 'charset'  => 'utf8mb4',
                 'DBCollat' => 'utf8mb4_general_ci',
+                'strictOn' => false,
             ];
         }
     }
