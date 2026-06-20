@@ -196,19 +196,18 @@ class Database extends Config
         } else { // production
             $this->default = [
                 'DSN'      => '',
-                'hostname' => 'tramway.proxy.rlwy.net',
-                'username' => 'root',
-                'password' => '',
-                'database' => 'railway',
+                'hostname' => env('database.default.hostname'),
+                'username' => env('database.default.username'),
+                'password' => env('database.default.password'),
+                'database' => env('database.default.database'),
                 'DBDriver' => 'MySQLi',
-                'DBPrefix' => 'swastha_raksa_',
-                'port'     => 14160,
+                'DBPrefix' => '',
+                'port'     => (int) env('database.default.port'),
                 'charset'  => 'utf8mb4',
                 'DBCollat' => 'utf8mb4_general_ci',
                 'strictOn' => false,
-                'options' => [
-                    MYSQLI_OPT_SSL_VERIFY_SERVER_CERT => false,
-                ],
+                'pConnect' => false,
+                'DBDebug'  => true,
             ];
         }
     }
