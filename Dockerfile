@@ -59,3 +59,4 @@ RUN chown -R www-data:www-data /var/www/html && \
     chmod -R 775 /var/www/html/writable
 
 EXPOSE 80
+CMD ["bash", "-c", "a2dismod mpm_event || true; a2dismod mpm_worker || true; a2enmod mpm_prefork || true; apache2-foreground"]
