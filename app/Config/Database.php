@@ -206,6 +206,9 @@ class Database extends Config
                 'charset'  => 'utf8mb4',
                 'DBCollat' => 'utf8mb4_general_ci',
                 'strictOn' => false,
+                'options' => [
+                    MYSQLI_OPT_SSL_VERIFY_SERVER_CERT => false,
+                ],
             ];
         }
     }
