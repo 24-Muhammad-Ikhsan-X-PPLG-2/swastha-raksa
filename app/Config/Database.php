@@ -196,13 +196,13 @@ class Database extends Config
         } else { // production
             $this->default = [
                 'DSN'      => '',
-                'hostname' => env('database.default.hostname'),
-                'username' => env('database.default.username'),
-                'password' => env('database.default.password'),
-                'database' => env('database.default.database'),
+                'hostname' => env('database.default.hostname', 'mysql.railway.internal'),
+                'username' => env('database.default.username', 'root'),
+                'password' => env('database.default.password', 'CXEHzyWMPmzVtDkXCUuBsjQGHTWCPXvC'),
+                'database' => env('database.default.database', 'railway'),
                 'DBDriver' => 'MySQLi',
                 'DBPrefix' => '',
-                'port'     => (int) env('database.default.port'),
+                'port'     => (int) env('database.default.port', 3306),
                 'charset'  => 'utf8mb4',
                 'DBCollat' => 'utf8mb4_general_ci',
                 'strictOn' => false,
